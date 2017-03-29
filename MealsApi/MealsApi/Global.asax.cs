@@ -12,6 +12,8 @@ namespace MealsApi
     {
         protected void Application_Start()
         {
+            FormatersConfig.Register();
+            
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

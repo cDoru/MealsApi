@@ -252,6 +252,7 @@
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\FormatersConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -324,6 +325,9 @@
     <Compile Include="Results\MovedPermanentlyResult.cs" />
     <Compile Include="Results\NoContentResult.cs" />
     <Compile Include="Results\RouteLocationResult.cs" />
+    <Compile Include="Services\IMealService.cs" />
+    <Compile Include="Services\MealService.cs" />
+    <Compile Include="Services\ServicesModule.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\ActionFilters\GlobalExceptionAttribute.cs" />
     <Compile Include="Utils\Autofac\AutofacDependencyScope.cs" />
@@ -341,8 +345,10 @@
     <Compile Include="Utils\Ef\SequentialGuid.cs" />
     <Compile Include="Utils\Ef\SequentialGuidGenerator.cs" />
     <Compile Include="Utils\EventLogger.cs" />
+    <Compile Include="Utils\Extensions\DateTimeConverterIso8601.cs" />
     <Compile Include="Utils\Extensions\DbContextExtensions.cs" />
     <Compile Include="Utils\Extensions\HttpApplicationExtensions.cs" />
+    <Compile Include="Utils\Extensions\TypeExtensions.cs" />
     <Compile Include="Utils\Glimpse\GlimpseTimeline.cs" />
     <Compile Include="Utils\Glimpse\OngoingCapture.cs" />
     <Compile Include="Utils\Glimpse\TimelineMessage.cs" />
@@ -352,6 +358,17 @@
     <Compile Include="Utils\Logging\Log4NetLoggerFactoryAdapter.cs" />
     <Compile Include="Utils\Logging\Log4NetThreadVariablesContext.cs" />
     <Compile Include="Utils\UnhandledExceptionUtils.cs" />
+    <Compile Include="Utils\Upload\FormatterLoggerAdapter.cs" />
+    <Compile Include="Utils\Upload\FormData.cs" />
+    <Compile Include="Utils\Upload\FormDataConverterLogger.cs" />
+    <Compile Include="Utils\Upload\FormDataToObjectConverter.cs" />
+    <Compile Include="Utils\Upload\FormMultipartEncodedMediaTypeFormatter.cs" />
+    <Compile Include="Utils\Upload\HttpContentToFormDataConverter.cs" />
+    <Compile Include="Utils\Upload\HttpFile.cs" />
+    <Compile Include="Utils\Upload\IFormDataConverterLogger.cs" />
+    <Compile Include="Utils\Upload\LogErrorInfo.cs" />
+    <Compile Include="Utils\Upload\LogItem.cs" />
+    <Compile Include="Utils\Upload\ObjectToMultipartDataByteArrayConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
