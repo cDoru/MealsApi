@@ -2,6 +2,7 @@
 using System.Web.Http;
 using MealsApi.Controllers.Base;
 using MealsApi.Utils;
+using MealsApi.Utils.ActionFilters;
 
 namespace MealsApi.Controllers
 {
@@ -10,6 +11,8 @@ namespace MealsApi.Controllers
     public class ValuesController : BaseApiController
     {
         // GET api/values
+
+        [GlimpseActionFilter("Get values")]
         public IEnumerable<string> Get()
         {
             Log.Info("Values hit");
