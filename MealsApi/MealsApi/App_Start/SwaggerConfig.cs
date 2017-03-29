@@ -249,7 +249,7 @@ namespace MealsApi
         /// Gets the xml comments file path
         /// </summary>
         /// <returns></returns>
-        public static string GetXmlCommentsPath()
+        private static string GetXmlCommentsPath()
         {
             return String.Format(CultureInfo.InvariantCulture, @"{0}\bin\MealsApi.XML", AppDomain.CurrentDomain.BaseDirectory);
         }
