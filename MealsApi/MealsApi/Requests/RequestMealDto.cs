@@ -2,7 +2,10 @@
 
 namespace MealsApi.Requests
 {
-    public class NewMealDto
+    /// <summary>
+    /// 
+    /// </summary>
+    public class RequestMealDto
     {
         public string Name { get; set; }
 
