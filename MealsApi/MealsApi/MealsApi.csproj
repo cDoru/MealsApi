@@ -185,6 +185,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -232,6 +233,9 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils\Autofac\AutofacDependencyScope.cs" />
+    <Compile Include="Utils\Autofac\AutofacResolver.cs" />
+    <Compile Include="Utils\Autofac\ThisAssembly.cs" />
     <Compile Include="Utils\CustomCorsAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
