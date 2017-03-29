@@ -225,6 +225,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Base\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,6 +237,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Results\LocationResult.cs" />
+    <Compile Include="Results\MovedPermanentlyResult.cs" />
+    <Compile Include="Results\NoContentResult.cs" />
+    <Compile Include="Results\RouteLocationResult.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\Autofac\AutofacDependencyScope.cs" />
     <Compile Include="Utils\Autofac\AutofacResolver.cs" />
@@ -316,7 +321,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\" />
+    <Folder Include="Data\Configurations\" />
+    <Folder Include="Data\Context\" />
+    <Folder Include="Data\Contracts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

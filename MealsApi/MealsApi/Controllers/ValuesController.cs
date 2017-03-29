@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using MealsApi.Controllers.Base;
 using MealsApi.Utils;
 
 namespace MealsApi.Controllers
 {
     //[Authorize] not autorizing for now 
     [CustomCors]
-    public class ValuesController : ApiController
+    public class ValuesController : BaseApiController
     {
         // GET api/values
         public IEnumerable<string> Get()
