@@ -287,6 +287,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Base\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MealsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\Configurations\ImageConfiguration.cs" />
     <Compile Include="Data\Configurations\MealConfiguration.cs" />
@@ -339,7 +340,9 @@
     <Compile Include="Utils\Ef\SaveUtil.cs" />
     <Compile Include="Utils\Ef\SequentialGuid.cs" />
     <Compile Include="Utils\Ef\SequentialGuidGenerator.cs" />
+    <Compile Include="Utils\EventLogger.cs" />
     <Compile Include="Utils\Extensions\DbContextExtensions.cs" />
+    <Compile Include="Utils\Extensions\HttpApplicationExtensions.cs" />
     <Compile Include="Utils\Glimpse\GlimpseTimeline.cs" />
     <Compile Include="Utils\Glimpse\OngoingCapture.cs" />
     <Compile Include="Utils\Glimpse\TimelineMessage.cs" />
@@ -348,6 +351,7 @@
     <Compile Include="Utils\Logging\Log4NetLogger.cs" />
     <Compile Include="Utils\Logging\Log4NetLoggerFactoryAdapter.cs" />
     <Compile Include="Utils\Logging\Log4NetThreadVariablesContext.cs" />
+    <Compile Include="Utils\UnhandledExceptionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

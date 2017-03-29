@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using MealsApi.App_Start;
+using MealsApi.Utils.Extensions;
 
 namespace MealsApi
 {
@@ -17,6 +18,9 @@ namespace MealsApi
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutofacConfig.ConfigureContainer();
+
+            // monitor unhandled exceptions
+            this.EnableMonitoring();
         }
     }
 }
