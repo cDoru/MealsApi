@@ -1,6 +1,6 @@
 ﻿namespace MealsApi.Services
 {
-    public class MealService
+    public class MealService : IMealService
     {
     }
 }
