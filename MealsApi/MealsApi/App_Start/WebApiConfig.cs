@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Microsoft.Owin.Security.OAuth;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace MealsApi
@@ -19,6 +21,22 @@ namespace MealsApi
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            var formatters = config.Formatters;
+
+            formatters.Remove(formatters.XmlFormatter); //Disable XML support
+
+            var jsonFormatter = formatters.JsonFormatter;
+
+            jsonFormatter.SerializerSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                NullValueHandling = NullValueHandling.Ignore,
+                DateTimeZoneHandling = DateTimeZoneHandling.Utc
+            };
+
+            //var cors = new EnableCorsAttribute("*", "*", "*"); //Enable CORS globally
+            config.EnableCors();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
