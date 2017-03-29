@@ -32,7 +32,6 @@ namespace MealsApi.Utils.ActionFilters
         public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
         {
             _ongoingCapture.Dispose();
-
             base.OnActionExecuted(actionExecutedContext);
         }
     }

@@ -288,6 +288,12 @@
     <Compile Include="Controllers\Base\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Data\Context\ContextBase.cs" />
+    <Compile Include="Data\Contracts\IConfigurationModule.cs" />
+    <Compile Include="Data\Contracts\IDbContext.cs" />
+    <Compile Include="Data\Contracts\BaseEntity.cs" />
+    <Compile Include="Data\Contracts\IBaseEntity.cs" />
+    <Compile Include="Data\Contracts\IGuidGenerator.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -307,8 +313,17 @@
     <Compile Include="Utils\Autofac\AutofacDependencyScope.cs" />
     <Compile Include="Utils\Autofac\AutofacResolver.cs" />
     <Compile Include="Utils\Autofac\ThisAssembly.cs" />
+    <Compile Include="Utils\Configuration\Configuration.cs" />
+    <Compile Include="Utils\Configuration\IConfiguration.cs" />
     <Compile Include="Utils\ContainerHttpModule.cs" />
     <Compile Include="Utils\CustomCorsAttribute.cs" />
+    <Compile Include="Utils\Ef\ContextException.cs" />
+    <Compile Include="Utils\Ef\ContextUniqueConstraintFailureException.cs" />
+    <Compile Include="Utils\Ef\LockUtil.cs" />
+    <Compile Include="Utils\Ef\SaveUtil.cs" />
+    <Compile Include="Utils\Ef\SequentialGuid.cs" />
+    <Compile Include="Utils\Ef\SequentialGuidGenerator.cs" />
+    <Compile Include="Utils\Extensions\DbContextExtensions.cs" />
     <Compile Include="Utils\Glimpse\GlimpseTimeline.cs" />
     <Compile Include="Utils\Glimpse\OngoingCapture.cs" />
     <Compile Include="Utils\Glimpse\TimelineMessage.cs" />
@@ -392,8 +407,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\Configurations\" />
-    <Folder Include="Data\Context\" />
-    <Folder Include="Data\Contracts\" />
+    <Folder Include="Data\Entities\" />
     <Folder Include="Trace\" />
   </ItemGroup>
   <ItemGroup>
