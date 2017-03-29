@@ -294,6 +294,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Base\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImagesController.cs" />
     <Compile Include="Controllers\MealsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\Configurations\ImageConfiguration.cs" />
@@ -333,8 +334,15 @@
     <Compile Include="Results\MovedPermanentlyResult.cs" />
     <Compile Include="Results\NoContentResult.cs" />
     <Compile Include="Results\RouteLocationResult.cs" />
+    <Compile Include="Services\ConfigurationKeys.cs" />
+    <Compile Include="Services\Encryptor.cs" />
     <Compile Include="Services\FileSystem.cs" />
+    <Compile Include="Services\IEncryptor.cs" />
     <Compile Include="Services\IFileSystem.cs" />
+    <Compile Include="Services\IImageService.cs" />
+    <Compile Include="Services\ImageResponse.cs" />
+    <Compile Include="Services\ImageService.cs" />
+    <Compile Include="Services\ImageStatus.cs" />
     <Compile Include="Services\IMealService.cs" />
     <Compile Include="Services\MealService.cs" />
     <Compile Include="Services\ServicesModule.cs" />
@@ -343,9 +351,8 @@
     <Compile Include="Utils\Autofac\AutofacDependencyScope.cs" />
     <Compile Include="Utils\Autofac\AutofacResolver.cs" />
     <Compile Include="Utils\Autofac\ThisAssembly.cs" />
-    <Compile Include="Utils\Configuration\Configuration.cs" />
-    <Compile Include="Utils\Configuration\ConfigurationModule.cs" />
-    <Compile Include="Utils\Configuration\IConfiguration.cs" />
+    <Compile Include="Services\Configuration.cs" />
+    <Compile Include="Services\IConfiguration.cs" />
     <Compile Include="Utils\ContainerHttpModule.cs" />
     <Compile Include="Utils\CustomCorsAttribute.cs" />
     <Compile Include="Utils\Ef\ContextException.cs" />
@@ -452,7 +459,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Images\" />
+    <Folder Include="App_Data\" />
     <Folder Include="Trace\" />
   </ItemGroup>
   <ItemGroup>

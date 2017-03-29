@@ -4,7 +4,7 @@ using System.Data.Entity.Core.EntityClient;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using MealsApi.Data.Contracts;
-using MealsApi.Utils.Configuration;
+using MealsApi.Services;
 using MealsApi.Utils.Ef;
 
 namespace MealsApi.Data.Context
@@ -14,15 +14,24 @@ namespace MealsApi.Data.Context
         private readonly IGuidGenerator _generator;
         readonly IConfigurationModule[] _modules;
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <param name="generator"></param>
+        /// <param name="modules"></param>
         protected DbContextBase(IConfiguration configuration, 
             IGuidGenerator generator, params IConfigurationModule[] modules)
-            : base(configuration.DatabaseConnection)
+            : base(configuration.GetConfigurationValue(ConfigurationKeys.DB_CONNECTION))
         {
             _generator = generator;
             _modules = modules;
         }
 
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
         protected DbContextBase()
         {
 

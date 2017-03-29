@@ -2,7 +2,7 @@
 using MealsApi.Data.Context;
 using MealsApi.Data.Contracts;
 using MealsApi.Data.Entities;
-using MealsApi.Utils.Configuration;
+using MealsApi.Services;
 using MealsApi.Utils.Extensions;
 
 namespace MealsApi.Data
@@ -23,5 +23,6 @@ namespace MealsApi.Data
         }
 
         public IDbSet<Meal> Meals { get; set; }
+        public IDbSet<ImageFile> Images { get; set; } 
     }
 }

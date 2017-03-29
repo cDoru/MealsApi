@@ -19,6 +19,10 @@ namespace MealsApi.Services
                     return mapPath != null ? string.Format("{0}/{1}", mapPath.Replace("\\", "/"), filePath) : null;
                 }
             });
+
+            builder.RegisterType<Configuration>().As<IConfiguration>().InstancePerLifetimeScope();
+            builder.RegisterType<Encryptor>().As<IEncryptor>().InstancePerLifetimeScope();
+            builder.RegisterType<ImageService>().As<IImageService>().InstancePerLifetimeScope();
         }
     }
 }

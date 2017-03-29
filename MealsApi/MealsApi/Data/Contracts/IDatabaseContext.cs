@@ -6,5 +6,6 @@ namespace MealsApi.Data.Contracts
     public interface IDatabaseContext : IDbContext
     {
         IDbSet<Meal> Meals { get; } 
+        IDbSet<ImageFile> Images { get; } 
     }
 }
