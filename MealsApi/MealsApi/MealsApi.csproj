@@ -332,6 +332,8 @@
     <Compile Include="Results\MovedPermanentlyResult.cs" />
     <Compile Include="Results\NoContentResult.cs" />
     <Compile Include="Results\RouteLocationResult.cs" />
+    <Compile Include="Services\FileSystem.cs" />
+    <Compile Include="Services\IFileSystem.cs" />
     <Compile Include="Services\IMealService.cs" />
     <Compile Include="Services\MealService.cs" />
     <Compile Include="Services\ServicesModule.cs" />
@@ -449,7 +451,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\Images\" />
     <Folder Include="Trace\" />
   </ItemGroup>
   <ItemGroup>
