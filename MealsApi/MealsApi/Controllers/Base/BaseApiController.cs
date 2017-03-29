@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Routing;
+using Common.Logging;
 using MealsApi.Results;
 
 namespace MealsApi.Controllers.Base
 {
     public abstract class BaseApiController : ApiController
     {
+        protected readonly ILog Log;
+
+        protected BaseApiController()
+        {
+            Log = LogManager.GetLogger(GetType());
+        }
+
+
         public NoContentResult NoContent()
         {
             return new NoContentResult(this);

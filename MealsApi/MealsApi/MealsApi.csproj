@@ -57,6 +57,22 @@
       <HintPath>..\packages\Autofac.WebApi2.4.0.1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net1213, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Log4Net1213.3.3.1\lib\net40\Common.Logging.Log4Net1213.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -247,6 +263,11 @@
     <Compile Include="Utils\Autofac\ThisAssembly.cs" />
     <Compile Include="Utils\ContainerHttpModule.cs" />
     <Compile Include="Utils\CustomCorsAttribute.cs" />
+    <Compile Include="Utils\Logging\CommonLoggingAppender.cs" />
+    <Compile Include="Utils\Logging\Log4NetGlobalVariablesContext.cs" />
+    <Compile Include="Utils\Logging\Log4NetLogger.cs" />
+    <Compile Include="Utils\Logging\Log4NetLoggerFactoryAdapter.cs" />
+    <Compile Include="Utils\Logging\Log4NetThreadVariablesContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -324,6 +345,7 @@
     <Folder Include="Data\Configurations\" />
     <Folder Include="Data\Context\" />
     <Folder Include="Data\Contracts\" />
+    <Folder Include="Trace\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

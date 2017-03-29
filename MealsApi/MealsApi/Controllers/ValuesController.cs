@@ -12,6 +12,7 @@ namespace MealsApi.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
+            Log.Info("Values hit");
             return new[] { "value1", "value2" };
         }
 
